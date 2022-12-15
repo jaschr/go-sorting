@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	/* Bubble Sort */
 	n := []int{1, 39, 34, 222, 43, 4, 56, 432, 12, 2, 4, 6, 77, 8, 86, 23, 23, 44, 12, 3, 1, 8}
 	fmt.Println("\nArray\n", n)
 	bs := sorting.BubbleSort(n)

@@ -1,6 +1,6 @@
 package sorting
 
-
+/* Bubble Sort */
 func BubbleSort(arr []int) []int {
 	isDone := false
 
