@@ -1,7 +1,7 @@
 package sorting
 
 /* Quick Sort */
-func Partition(arr []int, low, high int) ([]int, int) {
+func partition(arr []int, low, high int) ([]int, int) {
 	pivot := arr[high]
 	i := low
 	for j := low; j < high; j++ {
@@ -14,16 +14,16 @@ func Partition(arr []int, low, high int) ([]int, int) {
 	return arr, i
 }
 
-func QuickSorter(arr []int, low, high int) []int {
+func quickSorter(arr []int, low, high int) []int {
 	if low < high {
 		var p int
-		arr, p = Partition(arr, low, high)
-		arr = QuickSorter(arr, low, p-1)
-		arr = QuickSorter(arr, p+1, high)
+		arr, p = partition(arr, low, high)
+		arr = quickSorter(arr, low, p-1)
+		arr = quickSorter(arr, p+1, high)
 	}
 	return arr
 }
 
 func QuickSort(arr []int) []int {
-	return QuickSorter(arr, 0, len(arr)-1)
+	return quickSorter(arr, 0, len(arr)-1)
 }

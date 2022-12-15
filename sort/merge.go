@@ -1,7 +1,7 @@
 package sorting
 
 /* Merge Sort */
-func Merge(a []int, b []int) []int {
+func merge(a []int, b []int) []int {
 	arr := []int{}
 	i := 0
 	j := 0
@@ -29,5 +29,5 @@ func MergeSort(arr []int) []int {
 	}
 	first := MergeSort(arr[:len(arr)/2])
 	second := MergeSort(arr[len(arr)/2:])
-	return Merge(first, second)
+	return merge(first, second)
 }

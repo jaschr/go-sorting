@@ -1,7 +1,7 @@
 package sorting
 
 /* Radix Sort */
-func FindLargestNum(arr []int) int {
+func findLargestNum(arr []int) int {
 	largest := 0
 	for i := 0; i < len(arr); i++ {
 		if arr[i]> largest {
@@ -12,7 +12,7 @@ func FindLargestNum(arr []int) int {
 }
 
 func RadixSort(arr []int) []int {
-	largest := FindLargestNum(arr)
+	largest := findLargestNum(arr)
 	size := len(arr)
 	sig_digit := 1
 	partial := make([]int, size, size)
