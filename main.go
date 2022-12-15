@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jaschr/go-sorting/sorts"
+	"github.com/jaschr/go-sorting/sort"
 )
 
 func main() {
